@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 $hosts = [
     'afilter_es-search-01:9200',
@@ -9,6 +9,7 @@ $hosts = [
 ];
 
 $client = \Elasticsearch\ClientBuilder::create()->setHosts($hosts)->build();
+
 
 $request = [
     'index' => 'article_oliver',
